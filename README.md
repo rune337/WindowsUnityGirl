@@ -466,8 +466,9 @@ AIだと複雑すぎる何をしているかわからないコードを出すこ
 その後Windowsで確認するとブラウザで読み込みができずプレイできませんでした。<br>
 Mac、WindowsはUnity Editor上では問題なく再生でき、MacのみWeb上で再生できるものとなります。<br>
 原因はどうやらUnityちゃんマテリアルのシェーダーが重いせいでWeb上で再生できていないようでした。<br>
-UnityちゃんのマテリアルのシェーダーをUnityちゃんをRender PipLine Unit > UnitにしたところうまくWeb buildでも動くようになりました。<br>
+Unityちゃんの身体周りの全てのマテリアルのシェーダーをUniversal Render PipLine> UnitにしたところうまくWeb buildでも動くようになりました。<br>
 デフォルトのUnityちゃん用に用意されているシェーダーやToonだと動きませんでした。<br>
+また、試しに1つだけToonにしてみても動きませんでした。<br>
 以下のような事象だったのですが、良い解決策が出てこず大変でした。<br>
 https://github.com/Unity-Technologies/com.unity.toonshader/issues/378<br><br>
 
