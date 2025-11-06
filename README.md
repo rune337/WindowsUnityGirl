@@ -15,10 +15,10 @@ Fantasy Skybox FREE:空用の素材<br>
 RPG Character Mecanim Animation Pack FREE:キャラクターのモーション用のアニメーション<br>
 Melee Weapons Pack [Swords - Axes]:武器に使用<br>
 * Fontデータ： Noto Sans JP-Medium SDF (TMP_Font Asset)
-* 使用ツール:GitHub、SorceTree、VisualStudioCode、Chrome、Safari、Chatgpt、Google AI Studio、 Google Gemini、Macbook
+* 使用ツール:GitHub、SorceTree、VisualStudioCode、Chrome、Safari、Chatgpt、Google AI Studio、 Google Gemini、Macbook、Windows
 
 ## サンプルゲーム
-https://rune337.github.io/WebUnityGirl/
+https://rune337.github.io/WindowsWebUnityGirl/
 
 ## ゲームフロー
 * タイトル<br>
@@ -450,7 +450,6 @@ void Awake()
 AIだと複雑すぎる何をしているかわからないコードを出すこともありますので、そういうものはあまり使わず細かく処理を動かしてみて
 自分でも読めるものということを意識して作成しました。
 
-
 ## 今後の課題
 ### プログラム
 調べたものをデバッグしながらの作成になっており、
@@ -460,3 +459,20 @@ AIだと複雑すぎる何をしているかわからないコードを出すこ
 ### 機能
 ミニマップやキャラの色分け的なところができていないので、追加したいと思っています。<br>
 また、モーションを自分で作れないのでモーションなども勉強してアニメーションの幅を広げたいです。<br>
+
+## その他
+### Web上で再生できない
+macで作成、webデータをbuildしてアップロードして確認もmacで行っており、Windowsではweb上では確認していませんでした。<br>
+Windowsで確認するとブラウザで読み込みができず何も描画できずプレイできませんでした。<br>
+どうやらUnityちゃんのシェーダーが重いせいでWeb上で再生できていないようでした。<br>
+UnityちゃんのマテリアルのシェーダーをUnityちゃんをRender PipLine Unit > UnitにしたところうまくWeb buildでも動くようになりました。<br>
+デフォルトのUnityちゃん用に用意されているシェーダーやToonだと動きませんでした。<br>
+以下のような事象だったのですが、良い解決策が出てこず大変でした。<br>
+https://github.com/Unity-Technologies/com.unity.toonshader/issues/378<br><br>
+
+### カメラ
+カメラのインスペクターのoutputにターゲットディスプレイが表示されず、カメラを増やしても切り替えができないというところが原因不明となっています。<br>
+そのため、ミニマップを作成したいのですがうまくできていないです。<br>
+Web上で再生できない事象の時にWindowsで構築しなおした際に当初は表示されていたのですが、アセット追加やシェーダの変更を行って見てみると
+ディスプレイが選べなくなっていました。<br>
+今後の検討になります。<br>
