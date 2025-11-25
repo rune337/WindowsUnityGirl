@@ -480,3 +480,7 @@ https://github.com/Unity-Technologies/com.unity.toonshader/issues/378<br><br>
 Web上で再生できない事象の時にWindowsで構築しなおした際に当初は表示されていたのですが、アセット追加やシェーダの変更を行って見てみると
 ディスプレイが選べなくなっていました。<br>
 今後の検討になります。<br>
+
+### 追加
+11/26
+プレイヤーの剣に軌跡エフェクトを追加
