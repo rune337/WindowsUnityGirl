@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed, RunSpeed;
     float x, z;
-    Vector3 moving; // diff, Player_pos は不要になります
+    Vector3 moving;
     Rigidbody rb;
     Animator animator;
     public float jumpPower = 10.0f; //ジャンプ力
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public EnemyLeaderController enemyLeaderController; //スクリプト参照用のオブジェクト
     public EnemyController enemyController; //スクリプト参照用のオブジェクト
 
-    public Transform cameraTransform; // ここにメインカメラのTransformを設定します
+    public Transform cameraTransform;
 
     //HP周り
     public bool isInvincible = false; // 無敵状態を表すフラグ

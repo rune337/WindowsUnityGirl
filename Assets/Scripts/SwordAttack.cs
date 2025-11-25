@@ -1,6 +1,7 @@
 using UnityEngine;
 using RPGCharacterAnims.Actions;
 using Unity.VisualScripting;
+using System.Collections;
 
 public class SwordAttack : MonoBehaviour
 {
@@ -60,7 +61,14 @@ public class SwordAttack : MonoBehaviour
     {
         //攻撃アニメーション終了時の処理
         animator.SetFloat("Attack", 0f);
-        playerIsAttack = false;
+        StartCoroutine(AttackFalse()); //攻撃中フラグをfalseにするコルーチンを呼び出す
         swordCollider.DisableSwordCollider(); //剣のコライダーを無効にするのを呼び出す
+    }
+
+    //すぐにfalseにすると攻撃アニメション中にfalsenになり移動でき移動アニメーションが動く前に滑って移動してしまうため
+    IEnumerator AttackFalse()
+    {
+      yield return new WaitForSeconds(1.6f);
+      playerIsAttack = false;
     }
 }
